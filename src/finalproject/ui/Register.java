@@ -52,6 +52,7 @@ public class Register extends javax.swing.JFrame {
         passwordtxt = new javax.swing.JPasswordField();
         daftarBtn = new javax.swing.JButton();
         comboBoxUserType = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,6 +94,13 @@ public class Register extends javax.swing.JFrame {
 
         comboBoxUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pekerja" }));
 
+        jButton1.setText("Kembali");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -120,7 +128,9 @@ public class Register extends javax.swing.JFrame {
                                 .addComponent(comboBoxUserType, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(407, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(99, 99, 99)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(daftarBtn)
                 .addGap(64, 64, 64))
         );
@@ -151,7 +161,9 @@ public class Register extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(daftarBtn)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(daftarBtn)
+                    .addComponent(jButton1))
                 .addGap(23, 23, 23))
         );
 
@@ -211,6 +223,13 @@ public class Register extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_daftarBtnActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        Login login = new Login();
+        login.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -250,6 +269,7 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboBoxUserType;
     private javax.swing.JButton daftarBtn;
     private javax.swing.JTextField emailTxt;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
